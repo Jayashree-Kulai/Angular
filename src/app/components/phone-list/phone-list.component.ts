@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Phone } from './phone';
-import { PHONES } from './mockphonelist'
+import { PhoneService } from 'src/app/service/phone.service';
 
 @Component({
   selector: 'app-phone-list',
@@ -13,14 +13,16 @@ export class PhoneListComponent implements OnInit {
     price: 0,
     name: '',
     os: '',
-    imageUrl: ''
+    imageUrl: '',
+    id : ''
   }
   
-  phoneList = PHONES;
+  phoneList : Phone[];
 
-  constructor() { }
+  constructor(private phoneservice : PhoneService ) { }
 
   ngOnInit(): void {
+    this.loadPhones();
   }
 
   createLogo(os) {
@@ -29,6 +31,7 @@ export class PhoneListComponent implements OnInit {
 
   save() {
     const tempPhone: Phone = { ...this.phone }
+    this.phone.id = this.RandomString();
     this.phoneList.unshift(tempPhone)
   }
 
@@ -38,5 +41,13 @@ export class PhoneListComponent implements OnInit {
         this.phoneList.splice(index, 1)
       }
     })
+  }
+
+  RandomString() : string{
+    return Math.floor(Math.random() * Math.floor(30000)).toString();
+  }
+
+  loadPhones() : void {
+    this.phoneList = this.phoneservice.getAllPhones();
   }
 }

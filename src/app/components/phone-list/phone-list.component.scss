@@ -1,3 +1,5 @@
+@import '../../../variables.scss';
+
 .phone-container {
   .input-form {
     border: 1px solid gray;
@@ -25,6 +27,15 @@
     border-radius: 5px;
     margin-bottom: 12px;
     position: relative;
+
+    a {
+      color : unset;
+      &:hover {
+        color : unset;
+        text-decoration : none;
+      }
+    }
+
     .image {
       height: 150px;
     }
@@ -41,7 +52,7 @@
       }
 
       .price {
-        color: blue;
+        color:$darkBlue;
       }
 
       .os {
@@ -57,4 +68,12 @@
       bottom: 12px;
     }
   }
+
+  .phone:nth-child(even) {
+    background: $reddish;
+  }
+
+  
+
+  
 }

@@ -26,7 +26,7 @@ flex: 1;
 }
 
 .toolbar {
-position: absolute;
+position: fixed;
 top: 0;
 left: 0;
 right: 0;
@@ -36,6 +36,7 @@ align-items: center;
 background-color: #1976d2;
 color: white;
 font-weight: 600;
+z-index : 4;
 }
 
 .toolbar img {
@@ -150,12 +151,13 @@ z-index: -10;
 a,
 a:visited,
 a:hover {
-color: #1976d2;
+color: red;
 text-decoration: none;
+margin-left: 20px ;
 }
 
 a:hover {
-color: #125699;
+color: green;
 }
 
 .terminal {
