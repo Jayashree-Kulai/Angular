@@ -1,38 +1,60 @@
 .phone-container {
+  .input-form {
+    border: 1px solid gray;
+    padding: 20px;
 
-    margin-top: 60px;
-  
-    .phone {
-      background: lightblue;
-      display: flex;
-      justify-content: space-between;
-      width: 300px;
-      padding: 12px;
-      border-radius: 5px;
-  
-      .image {
-        height: 200px;
-      }
-  
-      .details {
-        font-size: 15px;
-  
-        .name {
-          color: red;
-          font-size: 24px;
-        }
-  
-        .price {
-          color: blue;
-        }
-  
-        .os {
-          color: green;
-        }
-  
-        button {
-          background: white;
-        }
+    input {
+      display: block;
+      margin-bottom: 12px;
+    }
+
+    .radio-btns {
+      li {
+        list-style: none;
+        display: inline-block;
+        display: flex;
       }
     }
   }
+
+  .phone {
+    background: lightblue;
+    display: flex;
+    width: 300px;
+    padding: 12px;
+    border-radius: 5px;
+    margin-bottom: 12px;
+    position: relative;
+    .image {
+      height: 150px;
+    }
+
+    .details {
+      font-size: 15px;
+      margin-left: 12px;
+      p {
+        margin: 0;
+      }
+      .name {
+        color: red;
+        font-size: 24px;
+      }
+
+      .price {
+        color: blue;
+      }
+
+      .os {
+        height: 20px;
+      }
+
+    }
+
+    button {
+      //background: white;
+      position: absolute;
+      right: 12px;
+      bottom: 12px;
+    }
+  }
+}
