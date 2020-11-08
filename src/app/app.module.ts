@@ -10,6 +10,10 @@ import { FormsModule } from '@angular/forms';
 import { PhonedetailsComponent } from './components/phonedetails/phonedetails.component';
 import { ContactusComponent } from './components/contactus/contactus.component';
 import { AboutusComponent } from './components/aboutus/aboutus.component';
+import { MovielistingComponent } from './components/movielisting/movielisting.component';
+import { HttpClientModule } from '@angular/common/http';
+import { MoviedetailsComponent } from './components/moviedetails/moviedetails.component';
+import { WishlistComponent } from './components/wishlist/wishlist.component';
 
 @NgModule({
   declarations: [
@@ -19,12 +23,16 @@ import { AboutusComponent } from './components/aboutus/aboutus.component';
     PhoneListComponent,
     PhonedetailsComponent,
     ContactusComponent,
-    AboutusComponent
+    AboutusComponent,
+    MovielistingComponent,
+    MoviedetailsComponent,
+    WishlistComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
