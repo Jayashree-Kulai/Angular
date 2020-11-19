@@ -1,5 +1,5 @@
 @import '../../../variables.scss';
-
+@import '../../../sass/main.scss';
 .phone-container {
   .input-form {
     border: 1px solid gray;
@@ -46,10 +46,11 @@
       p {
         margin: 0;
       }
-      .name {
-        color: red;
-        font-size: 24px;
-      }
+    
+       .name {
+        @include nameStyle;
+       }
+      
 
       .price {
         color:$darkBlue;

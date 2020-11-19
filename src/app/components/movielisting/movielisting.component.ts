@@ -21,9 +21,10 @@ export class MovielistingComponent implements OnInit {
   loadMovies(): void {
     this.isLoading = true;
     this.movies = [];
-    this.movieService.getMovies(this.pageNo).subscribe(response => {
-      this.movies = response.Search;
+    this.movieService.getMovieList().subscribe(response => {
+      this.movies = response.data.results;
       console.log('MOVIES', this.movies);
+
       this.isLoading = false;
     });
   }
