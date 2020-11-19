@@ -1,0 +1,66 @@
+@import '../../sass/style.scss';
+
+.container{
+  height: 1138px;
+  background: linear-gradient(52.03deg, #f7fb02ef 0%, #f15c06a9 100%);
+
+  .loginForm{
+    position: absolute;
+    height: 385px;
+    width: 535px;
+    border-radius: 20px;
+    max-width: 500px;
+    left:0;
+    right:0;
+    bottom:0;
+    margin: auto;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+    .login {
+      position: relative;
+      //margin-top: 5%;
+      //margin-left: 44%;
+      @include font;
+      color: #000000;
+      font-size: 24px;
+      font-weight: 500;
+      letter-spacing: 0;
+      line-height: 29px;
+    }
+
+    .password,
+    .username {
+      @include font;
+      position: relative;
+      //margin-left: 30%;
+    }
+
+    .loginButton {
+      position: relative;
+      height: 48px;
+      width: 139px;
+      border-radius: 25px;
+      //margin-left: 35%;
+    }
+
+    .forgotPassword {
+      height: 14px;
+      width: 97px;
+      opacity: 0.8;
+      color: #000000;
+      @include font;
+      letter-spacing: 0;
+      line-height: 14px;
+      position: relative;
+      //margin-left: 42%;
+      margin-top: 25px;
+    }
+    
+    
+  }
+
+}
