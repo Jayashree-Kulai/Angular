@@ -40,6 +40,8 @@
     }
 
     .loginButton {
+      @include font;
+      background-color: #FF410B;
       position: relative;
       height: 48px;
       width: 139px;
@@ -53,7 +55,8 @@
       opacity: 0.8;
       color: #000000;
       @include font;
-      letter-spacing: 0;
+    
+      text-align: center;
       line-height: 14px;
       position: relative;
       //margin-left: 42%;
