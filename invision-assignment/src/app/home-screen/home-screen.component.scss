@@ -1,0 +1,107 @@
+ .bg {
+    height: 1025px;
+    width: 1440px;
+    background-color: #f8a218a9;
+    display: inline-flex;
+    
+
+     .rectangle {
+        height: 476px;
+        width: 280px;
+        border-radius: 20px;
+        background-color: #ffffff;
+        
+        margin-left: 130px;
+        margin-right: 10px;
+        margin-bottom: 476px;
+        margin-top: 10px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        .group-9 {
+            height: 126px;
+            width: 240px;
+            margin: 20px;
+
+             .your-questionnaires {
+                height: 56px;
+                width: 161px;
+                opacity: 0.87;
+                color: #000000;
+                font-family: Roboto;
+                font-size: 24px;
+                letter-spacing: 0;
+                line-height: 28px;
+                margin-left:6px ;
+              }
+
+              .new-query-btn {
+                height: 48px;
+                width: 240px;
+                border-radius: 38.5px;
+                background-color: #fb6b0a;
+                margin-top:16px;
+                margin-bottom:16px;
+                color: #FFFFFF;
+                font-size: 14px;
+                font-weight: 500;
+                letter-spacing: 1.25px; 
+              }
+             
+          }
+        
+        .group-8 {
+            height: 252px;
+            width: 240px;
+            background-color: #c0ddb3;
+            margin: 20px;
+         }  
+      }
+
+      .form-bg {
+        height: 952px;
+        width: 880px;
+        box-shadow: 0 4px 40px 0 rgba(217,39,86,0.08);
+        background-color: #c0ddb3;
+        display: inline-flex;
+        margin-left: 10px;
+        margin-right: 130px;
+        margin-top: 10px;
+
+        //display: flex;
+        justify-content: center;
+        align-items: center;
+        //flex-direction: column;
+
+
+        .form {
+          height: 915px;
+          width: 580px;
+          box-shadow: 0 4px 40px 0 rgba(217,39,86,0.08);
+          background-color: #e9f089;
+          margin-right:15px;
+        }
+
+        .actions {
+          height: 351px;
+          width: 230px;
+          box-shadow: 0 4px 40px 0 rgba(217,39,86,0.08);
+          background-color: #e9f089;
+          margin-left:15px;
+          margin-top: -560px;
+        }
+      } 
+  }
+
+  .actions,
+  .form,
+  .form-bg,
+  .rectangle{
+    border-radius: 20px;
+  }
+
+
+  

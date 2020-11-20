@@ -9,6 +9,7 @@ import { HeaderComponent } from './header/header.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material/material.module';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
+import { HomeScreenComponent } from './home-screen/home-screen.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { ForgotPasswordComponent } from './forgot-password/forgot-password.compo
     AppComponent,
     LoginComponent,
     HeaderComponent,
-    ForgotPasswordComponent
+    ForgotPasswordComponent,
+    HomeScreenComponent
   ],
   entryComponents: [ForgotPasswordComponent],
   imports: [

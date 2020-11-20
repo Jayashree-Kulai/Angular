@@ -1,7 +1,43 @@
+@import '../../sass/style.scss';
+
 .logo{
-    background-color: rgba(18, 219, 209, 0.719);
-    img{
+    background-color: rgb(250, 250, 249);
+    .roboimg{
         margin: 20px;
         margin-left: 100px;
     }
+
+    .profile{
+        float:right;
+        width:200px;
+        height:100px;
+        margin-right: 85px;
+
+        .name{
+          float :left;
+          padding:5px;
+          height:50%;
+          margin-top:20px;
+          @include font;
+        }
+
+        .img-container {
+            margin-left: 90px;
+            height: 85%;
+            overflow: hidden;
+            margin-top: 2px;
+            border-radius: 50%;
+            border: 5px solid #e77913;
+          img {
+            height: 100%;
+            width: 100%;
+            
+          }
+        }
+       
+      }
 }
+
+   
+  
+  
