@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-forgot-password',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ForgotPasswordComponent implements OnInit {
 
-  constructor() { }
+  constructor(public dialog : MatDialog) { }
 
   ngOnInit(): void {
+  }
+  closeDialog() {
+    this.dialog.closeAll();
   }
 
 }

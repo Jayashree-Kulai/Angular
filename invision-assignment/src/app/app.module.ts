@@ -10,6 +10,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material/material.module';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { HomeScreenComponent } from './home-screen/home-screen.component';
+import { LoginAuthGuard } from './auth/login-auth.guard';
+import { LoginService } from './services/login.service';
+import { ChangePasswordComponent } from './change-password/change-password.component';
 
 
 @NgModule({
@@ -18,7 +21,8 @@ import { HomeScreenComponent } from './home-screen/home-screen.component';
     LoginComponent,
     HeaderComponent,
     ForgotPasswordComponent,
-    HomeScreenComponent
+    HomeScreenComponent,
+    ChangePasswordComponent,
   ],
   entryComponents: [ForgotPasswordComponent],
   imports: [
@@ -28,7 +32,7 @@ import { HomeScreenComponent } from './home-screen/home-screen.component';
     MaterialModule
 
   ],
-  providers: [],
+  providers: [LoginAuthGuard, LoginService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
