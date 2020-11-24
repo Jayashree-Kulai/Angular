@@ -1,25 +1,126 @@
 <app-header></app-header>
 
-<div class = "bg">
-    <div class = "rectangle">
-        <div class = "group-9">
-            <div class = "your-questionnaires">
+<div class="bg">
+    <div class="rectangle">
+        <div class="group-9">
+            <div class="your-questionnaires">
                 Your Questionnaires
             </div>
-            <button mat-mini-fab class ="new-query-btn">New Questionnaire</button>
+            <button mat-mini-fab class="new-query-btn">New Questionnaire</button>
         </div>
 
-        <div class = "group-8">
+        <div class="group-8">
         </div>
     </div>
 
-    <div class = "form-bg">
-        <div class = "form">
+    <div class="form-bg">
+        <div class="form">
+            
+            <form [formGroup]="service.form">
+                <input type="hidden" formControlName="$key">
+                <div class="questionnaire">
+                    <mat-toolbar>
+                        <span>Questionnaire</span>
+                    </mat-toolbar>
+        
+                    <mat-form-field appearance="outline">
+                        <mat-label>Enter Password</mat-label>
+                        <input formControlName="title" matInput>
+                        <mat-hint>Please enter appropriate title</mat-hint>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline">
+                        <mat-label>Description</mat-label>
+                        <input formControlName="description" matInput>
+                    </mat-form-field>
+
+                    <mat-grid-list cols="2" rowHeight="80px">
+                        <mat-grid-tile>
+                            <mat-form-field appearance="outline">
+                                <mat-label>Button Title</mat-label>
+                                <input formControlName="buttonTitle" matInput>
+                            </mat-form-field>
+                        </mat-grid-tile>
+
+                        <mat-grid-tile>
+                            <mat-form-field appearance="outline">
+                                <mat-label>Button Text</mat-label>
+                                <input formControlName="buttonText" matInput>
+                            </mat-form-field>
+                        </mat-grid-tile>
+                    </mat-grid-list>
+
+                    <mat-form-field appearance="outline">
+                        <mat-label>Check Box Text</mat-label>
+                        <input formControlName="checkBoxText" matInput>
+                    </mat-form-field>
+                </div>
+
+                <div class="additional-details">
+                    <mat-toolbar>
+                        <span>Additional Details</span>
+                    </mat-toolbar>
+
+                    <mat-grid-list cols="3" rowHeight="80px">
+                        <mat-grid-tile>
+                            <mat-form-field appearance="outline">
+                                <mat-label>Select Start Date</mat-label>
+                                <input formControlName="startDate" matInput [matDatepicker]="picker1">
+                                <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+                                <mat-datepicker #picker1></mat-datepicker>
+                            </mat-form-field>
+                        </mat-grid-tile>
+
+                        <mat-grid-tile>
+                            <mat-form-field appearance="outline">
+                                <mat-label>Select End Date</mat-label>
+                                <input formControlName="endDate" matInput [matDatepicker]="picker">
+                                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                                <mat-datepicker #picker></mat-datepicker>
+                            </mat-form-field>
+                        </mat-grid-tile>
+
+                        <mat-grid-tile>
+                            <mat-form-field appearance="outline">
+                                <mat-label>Auto Remainder</mat-label>
+                                <input formControlName="autoRemainder" matInput>
+                                <span matSuffix>Days</span>
+                            </mat-form-field>
+                        </mat-grid-tile>
+                    </mat-grid-list>
+
+                    <mat-grid-list cols="2" rowHeight="80px">
+                        <mat-grid-tile>
+                            <mat-form-field appearance="outline">
+                                <mat-label>Select Content PPT File</mat-label>
+                                <input formControlName="pptFile" matInput>
+                                <mat-icon matSuffix>cloud_upload</mat-icon>
+                            </mat-form-field>
+                        </mat-grid-tile>
+
+                        <mat-grid-tile>
+                            <mat-form-field appearance="outline">
+                                <mat-label>Select Participant xl Sheet</mat-label>
+                                <input formControlName="xlSheet" matInput>
+                                <mat-icon matSuffix>cloud_upload</mat-icon>
+                            </mat-form-field>
+                        </mat-grid-tile>
+                    </mat-grid-list>
+
+                    <mat-form-field appearance="outline">
+                        <mat-label>Mail Body</mat-label>
+                        <textarea formControlName="mailBody" matInput></textarea>
+                    </mat-form-field>
+
+                </div>
+
+
+
+
+            </form>
         </div>
 
-        <div class = "actions">
+        <div class="actions">
         </div>
     </div>
 </div>
-
-

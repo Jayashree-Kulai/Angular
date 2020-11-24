@@ -1,28 +1,30 @@
 <app-header></app-header>
 
-<div class = "container">
-    <div class = "loginForm">
-        <div class = "login mat-title">
+<div class="container">
+    <div class="loginForm">
+        <div class="login mat-title">
             LogIn
         </div>
-
-        <div class = "username">
-            <mat-form-field appearance = "outline" style="width:20vw">
-                <mat-label>Enter Username</mat-label>
-                <input matInput>
-              </mat-form-field>
-        </div>
-        <div class = "password">
-            <mat-form-field appearance = "outline" style="width:20vw">
-                <mat-label>Enter Password</mat-label>
-                <input matInput>
-              </mat-form-field>
-        </div>
-        <div >
-            <button class = "loginButton" mat-raised-button  routerLink = "/homescreen" routerLinkActivate = "active">Login</button>
-        </div>
-        <div class = "forgotPassword" (click) = "openDialog()">
-            Forgot password?
-        </div>
+        <form [formGroup]="loginService.form">
+            <div class="username">
+                <mat-form-field appearance="outline" style="width:20vw">
+                    <mat-label>Enter Username</mat-label>
+                    <input formControlName="username" matInput>
+                </mat-form-field>
+            </div>
+            <div class="password">
+                <mat-form-field appearance="outline" style="width:20vw">
+                    <mat-label>Enter Password</mat-label>
+                    <input formControlName="password" matInput>
+                </mat-form-field>
+            </div>
+            <div>
+                <button class="loginButton" mat-raised-button routerLink="/homescreen"
+                    routerLinkActivate="active">Login</button>
+            </div>
+            <div class="forgotPassword" (click)="openDialog()">
+                Forgot password?
+            </div>
+        </form>
     </div>
 </div>

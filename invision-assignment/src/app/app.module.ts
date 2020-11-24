@@ -13,6 +13,11 @@ import { HomeScreenComponent } from './home-screen/home-screen.component';
 import { LoginAuthGuard } from './auth/login-auth.guard';
 import { LoginService } from './services/login.service';
 import { ChangePasswordComponent } from './change-password/change-password.component';
+import { HomeScreenService } from './services/home-screen.service';
+import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
+
+
 
 
 @NgModule({
@@ -29,10 +34,12 @@ import { ChangePasswordComponent } from './change-password/change-password.compo
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    ReactiveFormsModule,
+    FormsModule
 
   ],
-  providers: [LoginAuthGuard, LoginService],
+  providers: [LoginAuthGuard, LoginService, HomeScreenService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

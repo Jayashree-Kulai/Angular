@@ -83,6 +83,24 @@
           box-shadow: 0 4px 40px 0 rgba(217,39,86,0.08);
           background-color: #e9f089;
           margin-right:15px;
+
+          .questionnaire {
+            background-color: #ffffff;
+            padding: 2%;
+            mat-form-field{
+              width:100%
+            }
+          }
+
+          .additional-details {
+            height: 393px;
+            padding: 2%;
+            //background-color: #dda2a2e8;
+            
+            mat-form-field{
+              width:100%
+            }
+          }
         }
 
         .actions {
