@@ -4,14 +4,22 @@
     justify-content: center;
     button{
         display: block;
-        background-color: #FF410B;
         margin-top: 10px;
+        height: 48px;
+        width: 240px;
+        border-radius: 38.5px;
+        background-color: #ffffff;
+        color: #fb6b0a;
+        font-size: 14px;
+        font-weight: 500;
+        letter-spacing: 1.25px;     
     }
     #btmicon{
         box-shadow: 0 4px 40px 0 rgba(217,39,86,0.08);
         font-size: 43px;
         color: #fa6704;
         float: right;
+        margin-top:16px;
         //margin-bottom: -88%;
         //margin-right: 80px;
     }

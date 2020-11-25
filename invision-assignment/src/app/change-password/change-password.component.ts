@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { LoginService } from '../services/login.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-change-password',
@@ -7,9 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ChangePasswordComponent implements OnInit {
 
-  constructor() { }
+  constructor(public service : LoginService, private router: Router) { }
 
   ngOnInit(): void {
+  }
+
+  checkpassword() {
+    console.log("change password...", this.service.changepassword)
+    if (this.service.changepassword.value.newPassword == this.service.changepassword.value.reEnterPassword) {
+      alert("Success!!");
+    } else {
+      alert("Please enter proper Credential!!");
+      this.router.navigate(['change-password'])
+    }
   }
 
 }

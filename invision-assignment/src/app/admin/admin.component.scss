@@ -1,0 +1,28 @@
+.admin {
+    .parent{
+        padding: 25px;
+        mat-form-field{
+            margin-right: 20px;
+        }
+    }
+
+    .line {
+        box-sizing: border-box;
+        height: 2px;
+        width: 100%;
+        border: 1px dashed #A2A2A2;
+        opacity: 0.6;
+      }
+
+    .child{
+        padding: 25px;
+        mat-form-field{
+            margin-right: 20px;
+        }  
+    }
+
+    button{
+        background-color: #fa6704;
+        margin-right: 1%;
+    }
+}

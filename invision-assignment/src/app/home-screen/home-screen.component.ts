@@ -17,9 +17,6 @@ export class HomeScreenComponent implements OnInit {
 
   openDialog(){
     this.dialog.open(OptionsComponent ,{
-      //height: '100vw',
-      //width: '100vw',
-      //maxWidth: '100vw',
       panelClass: 'backdropBackground'
     });
   }

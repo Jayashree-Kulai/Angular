@@ -12,11 +12,17 @@ export class LoginService {
     username : new FormControl(''),
     password : new FormControl(''),
   })
+
+  changepassword: FormGroup = new FormGroup({
+    newPassword: new FormControl('',[Validators.required]),
+    reEnterPassword: new FormControl('',[Validators.required])
+  });
   
   isCredentials() : boolean {
     // if(this.form.value.username == "11" && this.form.value.password == "11") {
       return true;
     // }
-    
   }
+
+  
 }
