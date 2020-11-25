@@ -56,8 +56,20 @@
         .group-8 {
             height: 252px;
             width: 240px;
-            background-color: #c0ddb3;
             margin: 20px;
+            .new-query-btn {
+              height: 48px;
+              width: 240px;
+              border-radius: 38.5px;
+              background-color: #fb6a0a5b;
+              margin-top:9px;
+              margin-bottom:9px;
+              color: #FFFFFF;
+              font-size: 14px;
+              font-weight: 500;
+              letter-spacing: 1.25px; 
+            }
+           
          }  
       }
 
@@ -95,7 +107,7 @@
           .additional-details {
             height: 393px;
             padding: 2%;
-            //background-color: #dda2a2e8;
+            background-color: #ffffff;
             
             mat-form-field{
               width:100%
@@ -107,9 +119,20 @@
           height: 351px;
           width: 230px;
           box-shadow: 0 4px 40px 0 rgba(217,39,86,0.08);
-          background-color: #e9f089;
+          background-color: #f9faf2;
           margin-left:15px;
           margin-top: -560px;
+
+          button{
+            margin-left: 15px;
+            background-color: #ee985e9f;
+            width: 200px;
+            height: 50px;
+            margin-top: 15px;
+            mat-icon{
+              color: #fa6704;
+            }
+          }
         }
       } 
   }

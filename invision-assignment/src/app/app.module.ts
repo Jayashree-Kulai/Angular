@@ -16,6 +16,8 @@ import { ChangePasswordComponent } from './change-password/change-password.compo
 import { HomeScreenService } from './services/home-screen.service';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
+import { AdminComponent } from './admin/admin.component';
+import { SuperAdminComponent } from './super-admin/super-admin.component';
 
 
 
@@ -28,6 +30,8 @@ import { FormsModule } from '@angular/forms';
     ForgotPasswordComponent,
     HomeScreenComponent,
     ChangePasswordComponent,
+    AdminComponent,
+    SuperAdminComponent,
   ],
   entryComponents: [ForgotPasswordComponent],
   imports: [
