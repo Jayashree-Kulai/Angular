@@ -1,6 +1,17 @@
 <div class="options">
-    <button mat-raised-button routerLink="/changepassword" (click)="closeDialog()">Change Password</button>
-    <button mat-raised-button routerLink="/superadmin" (click)="openAdminDialog()">Add/Remove Super Admins</button>
-    <button mat-raised-button routerLink="/admin" (click)="openAdminDialog()">Add/Remove Admins</button>
-    <mat-icon id="btmicon" mat-dialog-close id="btmicon">cancel</mat-icon>
+    <button mat-raised-button routerLink="/changepassword" (click)="closeDialog()">
+        Change Password
+    </button>
+
+    <button mat-raised-button routerLink="/superadmin" (click)="openSuperAdminDialog()">
+        Add/Remove Super Admins
+    </button>
+
+    <button mat-raised-button routerLink="/admin" (click)="openAdminDialog()">
+        Add/Remove Admins
+    </button>
+
+    <mat-icon id="btmicon" mat-dialog-close id="btmicon">
+        cancel
+    </mat-icon>
 </div>
