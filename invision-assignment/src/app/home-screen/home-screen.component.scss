@@ -1,3 +1,10 @@
+::ng-deep {
+  .backdropBackground >  mat-dialog-container {
+    margin-left: 500px;
+      //margin-right: 150px;
+      //opacity: 20%;
+  }
+}
  .bg {
     height: 1025px;
     width: 1440px;
@@ -95,10 +102,16 @@
           box-shadow: 0 4px 40px 0 rgba(217,39,86,0.08);
           background-color: #e9f089;
           margin-right:15px;
+          margin-left: 15px;
+
+          mat-toolbar{
+            margin-bottom: 5%;
+          }
 
           .questionnaire {
             background-color: #ffffff;
             padding: 2%;
+            margin-bottom: 40px;
             mat-form-field{
               width:100%
             }
@@ -124,16 +137,28 @@
           margin-top: -560px;
 
           button{
+            
             margin-left: 15px;
             background-color: #ee985e9f;
-            width: 200px;
+            width: 180px;
             height: 50px;
             margin-top: 15px;
             mat-icon{
+              text-align: center;
               color: #fa6704;
+              margin-left: -86px;
             }
           }
         }
+
+        #btmicon{
+          box-shadow: 0 4px 40px 0 rgba(217,39,86,0.08);
+          font-size: 50px;
+          color: #fa6704;
+          float: right;
+          margin-bottom: -88%;
+          margin-right: 80px;
+         }
       } 
   }
 
@@ -143,6 +168,8 @@
   .rectangle{
     border-radius: 20px;
   }
+
+  
 
 
   

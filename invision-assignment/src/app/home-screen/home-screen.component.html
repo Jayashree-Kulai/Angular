@@ -11,22 +11,30 @@
 
         <div class="group-8">
             <button mat-mini-fab class="new-query-btn" disabled>Secure Coding Guide...</button>
-            <button mat-mini-fab class="new-query-btn">ISHM Questionnaire</button>
-            <button mat-mini-fab class="new-query-btn">PA Questionnaire</button>
-            <button mat-mini-fab class="new-query-btn">Process Guidelines</button>
+
+            <button mat-mini-fab class="new-query-btn">
+                ISHM Questionnaire
+                <mat-icon>arrow_forward_ios</mat-icon>
+            </button>
+
+            <button mat-mini-fab class="new-query-btn">PA Questionnaire<mat-icon>arrow_forward_ios</mat-icon>
+            </button>
+            <button mat-mini-fab class="new-query-btn">
+                Process Guidelines<mat-icon>arrow_forward_ios</mat-icon>
+            </button>
         </div>
     </div>
 
     <div class="form-bg">
         <div class="form">
-            
+
             <form [formGroup]="service.form">
                 <input type="hidden" formControlName="$key">
                 <div class="questionnaire">
                     <mat-toolbar>
                         <span>Questionnaire</span>
                     </mat-toolbar>
-        
+
                     <mat-form-field appearance="outline">
                         <mat-label>Enter Password</mat-label>
                         <input formControlName="title" matInput>
@@ -35,7 +43,7 @@
 
                     <mat-form-field appearance="outline">
                         <mat-label>Description</mat-label>
-                        <input formControlName="description" matInput>
+                        <textarea formControlName="description" matInput></textarea>
                     </mat-form-field>
 
                     <mat-grid-list cols="2" rowHeight="80px">
@@ -98,7 +106,7 @@
                             <mat-form-field appearance="outline">
                                 <mat-label>Select Content PPT File</mat-label>
                                 <input formControlName="pptFile" matInput>
-                                <mat-icon matSuffix>cloud_upload</mat-icon>
+                                <mat-icon matSuffix color='accent'>cloud_upload</mat-icon>
                             </mat-form-field>
                         </mat-grid-tile>
 
@@ -121,25 +129,27 @@
         </div>
 
         <div class="actions">
-                <button mat-raised-button>
-                    <mat-icon matSuffix>save</mat-icon>   SAVE
-                </button>
+            <button mat-raised-button>
+                <mat-icon matSuffix>save</mat-icon> SAVE
+            </button>
 
-                <button mat-raised-button>
-                    <mat-icon matSuffix>preview</mat-icon>   PREVIEW
-                </button>
+            <button mat-raised-button>
+                <mat-icon matSuffix>preview</mat-icon> PREVIEW
+            </button>
 
-                <button mat-raised-button>
-                    <mat-icon matSuffix>publish</mat-icon>   PUBLISH
-                </button>
+            <button mat-raised-button>
+                <mat-icon matSuffix>publish</mat-icon> PUBLISH
+            </button>
 
-                <button mat-raised-button>
-                    <mat-icon matSuffix>event</mat-icon>   REMIND
-                </button>
+            <button mat-raised-button>
+                <mat-icon matSuffix>add_alert</mat-icon> REMIND
+            </button>
 
-                <button mat-raised-button>
-                    <mat-icon matSuffix>save</mat-icon>   GENERATE REPORT
-                </button> 
+            <button mat-raised-button>
+                <mat-icon matSuffix>description</mat-icon> GENERATE REPORT
+            </button>
         </div>
+        <mat-icon id="btmicon" (click)="openDialog()">add_circle</mat-icon>
     </div>
+    
 </div>

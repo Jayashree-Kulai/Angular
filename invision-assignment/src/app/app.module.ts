@@ -18,6 +18,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
 import { AdminComponent } from './admin/admin.component';
 import { SuperAdminComponent } from './super-admin/super-admin.component';
+import { OptionsComponent } from './options/options.component';
 
 
 
@@ -32,6 +33,7 @@ import { SuperAdminComponent } from './super-admin/super-admin.component';
     ChangePasswordComponent,
     AdminComponent,
     SuperAdminComponent,
+    OptionsComponent,
   ],
   entryComponents: [ForgotPasswordComponent],
   imports: [

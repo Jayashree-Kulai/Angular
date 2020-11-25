@@ -4,6 +4,8 @@ import { LoginComponent } from './login/login.component';
 import { HomeScreenComponent } from './home-screen/home-screen.component';
 import { LoginAuthGuard } from './auth/login-auth.guard';
 import { ChangePasswordComponent } from './change-password/change-password.component';
+import { AdminComponent } from './admin/admin.component';
+import { SuperAdminComponent } from './super-admin/super-admin.component';
 
 const routes: Routes = [
   {
@@ -23,6 +25,14 @@ const routes: Routes = [
   {
     path : 'changepassword',
     component : ChangePasswordComponent
+  },
+  {
+    path : 'admin',
+    component : AdminComponent
+  },
+  {
+    path : 'superadmin',
+    component : SuperAdminComponent
   }
 ];
 

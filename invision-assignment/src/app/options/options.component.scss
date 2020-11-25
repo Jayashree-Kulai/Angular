@@ -1,0 +1,18 @@
+@import '../../sass/style.scss';
+
+.options{
+    justify-content: center;
+    button{
+        display: block;
+        background-color: #FF410B;
+        margin-top: 10px;
+    }
+    #btmicon{
+        box-shadow: 0 4px 40px 0 rgba(217,39,86,0.08);
+        font-size: 43px;
+        color: #fa6704;
+        float: right;
+        //margin-bottom: -88%;
+        //margin-right: 80px;
+    }
+}
