@@ -8,7 +8,7 @@
  .bg {
     height: 1025px;
     width: 1440px;
-    background-color: #f8a218a9;
+    background-color: #F7F7F7;
     display: inline-flex;
     
 
@@ -49,7 +49,7 @@
                 height: 48px;
                 width: 240px;
                 border-radius: 38.5px;
-                background-color: #fb6b0a;
+                background-color: #D92756;
                 margin-top:16px;
                 margin-bottom:16px;
                 color: #FFFFFF;
@@ -68,13 +68,17 @@
               height: 48px;
               width: 240px;
               border-radius: 38.5px;
-              background-color: #fb6a0a5b;
+              background-color: rgba(217,39,86,0.05);
               margin-top:9px;
               margin-bottom:9px;
-              color: #FFFFFF;
+              color: #000000;
               font-size: 14px;
               font-weight: 500;
               letter-spacing: 1.25px; 
+
+              mat-icon {
+                float: right;
+              }
             }
            
          }  
@@ -84,28 +88,25 @@
         height: 952px;
         width: 880px;
         box-shadow: 0 4px 40px 0 rgba(217,39,86,0.08);
-        background-color: #c0ddb3;
+        background-color: #FFFFFF;
         display: inline-flex;
         margin-left: 10px;
         margin-right: 130px;
         margin-top: 10px;
-
-        //display: flex;
         justify-content: center;
         align-items: center;
-        //flex-direction: column;
-
-
+        
         .form {
           height: 915px;
           width: 580px;
           box-shadow: 0 4px 40px 0 rgba(217,39,86,0.08);
-          background-color: #e9f089;
+          background-color: #FFFFFF;
           margin-right:15px;
           margin-left: 15px;
 
           mat-toolbar{
             margin-bottom: 5%;
+            background-color: #ffffff;
           }
 
           .questionnaire {
@@ -136,29 +137,87 @@
           margin-left:15px;
           margin-top: -560px;
 
-          button{
-            
+          button{ 
             margin-left: 15px;
-            background-color: #ee985e9f;
-            width: 180px;
+            background-color: #FDF4F6;
+            width: 187px;
             height: 50px;
             margin-top: 15px;
+            
             mat-icon{
-              text-align: center;
-              color: #fa6704;
-              margin-left: -86px;
+              color: #D92756;
+              //margin-left:10px;
+              vertical-align: middle;
+            }
+            label{ 
+              height: 16px;
+              width: 120.19px;
+              color: #D92756;
+              font-family: Roboto;
+              font-size: 14px;
+              font-weight: 500;
+              letter-spacing: 1.25px;
+              line-height: 16px;
             }
           }
         }
 
-        #btmicon{
-          box-shadow: 0 4px 40px 0 rgba(217,39,86,0.08);
-          font-size: 50px;
-          color: #fa6704;
-          float: right;
-          margin-bottom: -88%;
-          margin-right: 80px;
-         }
+        .Option-container{
+
+          .toggle-option{
+          position: relative;
+          z-index:5;
+          position: absolute;
+          bottom: -40%;
+          right: 10%;
+          
+          .display{
+          border-radius: 24px;
+          background-color: #fcf4f6;
+          width:194.6px;
+          height:33.6px;
+          margin:0.5em;
+          margin-bottom: 1.5em;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: #d92756;
+          font-size: 11px;
+          font-weight: 500;
+          letter-spacing: 0.88px;
+          line-height: 11.2px;
+          text-align: center;
+          outline: none;
+          cursor: pointer;
+          }
+          
+          
+          .display1{
+          button{
+          width:194.6px;
+          height:33.6px;
+          margin:0.5em;
+          border-radius: 38.5px;
+          background-color: #fcf4f6;
+          margin-top:16px;
+          margin-bottom:16px;
+          outline: none;
+          border: none;
+          color:#d92756;
+          font-size: 11px;
+          font-weight: 500;
+          letter-spacing: 1.25px;
+          }
+          }
+          }
+          .icon1{
+          position: relative;
+          z-index:5;
+          margin-left: -46%;
+          margin-top: 1525%;
+          }
+          
+          }
       } 
   }
 
@@ -169,7 +228,14 @@
     border-radius: 20px;
   }
 
-  
-
-
-  
+  .overlay{
+    position: fixed;
+    display: block;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 1;
+    cursor: pointer;
+    }

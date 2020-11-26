@@ -19,7 +19,7 @@ export class ChangePasswordComponent implements OnInit {
     if (this.service.changepassword.value.newPassword == this.service.changepassword.value.reEnterPassword) {
       alert("Success!!");
     } else {
-      alert("Please enter proper Credential!!");
+      alert("Can't change!!");
       this.router.navigate(['change-password'])
     }
   }

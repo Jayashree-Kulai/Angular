@@ -6,7 +6,7 @@
             <div class="your-questionnaires">
                 Your Questionnaires
             </div>
-            <button mat-mini-fab class="new-query-btn">New Questionnaire</button>
+            <button mat-mini-fab class="new-query-btn" color='accent'>New Questionnaire</button>
         </div>
 
         <div class="group-8">
@@ -27,7 +27,6 @@
 
     <div class="form-bg">
         <div class="form">
-
             <form [formGroup]="service.form">
                 <input type="hidden" formControlName="$key">
                 <div class="questionnaire">
@@ -113,8 +112,8 @@
                         <mat-grid-tile>
                             <mat-form-field appearance="outline">
                                 <mat-label>Select Participant xl Sheet</mat-label>
-                                <input formControlName="xlSheet" matInput>
-                                <mat-icon matSuffix>cloud_upload</mat-icon>
+                                <input formControlName="xlSheet" matInput >
+                                <mat-icon matSuffix color='accent'>cloud_upload</mat-icon>
                             </mat-form-field>
                         </mat-grid-tile>
                     </mat-grid-list>
@@ -130,26 +129,54 @@
 
         <div class="actions">
             <button mat-raised-button>
-                <mat-icon matSuffix>save</mat-icon> SAVE
+                <mat-icon matSuffix>save</mat-icon>
+                <label>SAVE</label>
             </button>
 
             <button mat-raised-button>
-                <mat-icon matSuffix>preview</mat-icon> PREVIEW
+                <mat-icon matSuffix>preview</mat-icon>
+                <label>PREVIEW</label>
             </button>
 
             <button mat-raised-button>
-                <mat-icon matSuffix>publish</mat-icon> PUBLISH
+                <mat-icon matSuffix>publish</mat-icon>
+                <label>PUBLISH</label>
             </button>
 
             <button mat-raised-button>
-                <mat-icon matSuffix>add_alert</mat-icon> REMIND
+                <mat-icon matSuffix>add_alert</mat-icon>
+                <label>REMIND</label>
             </button>
 
             <button mat-raised-button>
-                <mat-icon matSuffix>description</mat-icon> GENERATE REPORT
+                <mat-icon matSuffix>description</mat-icon>
+                <label>GENERATE REPORT</label>
             </button>
         </div>
-        <mat-icon id="btmicon" (click)="openDialog()">add_circle</mat-icon>
+
+        <div class="Option-container">
+            <span class="toggle-option" *ngIf="!overlay">
+                <div mat-dialog-close routerLink="/changepassword" class="display">
+                    Change Password
+                </div>
+                
+                <div class="display1">
+                    <button mat-flat (click)="openSuperAdminDialog()">
+                        Add/Remove Super Admins</button>
+                </div>
+                <div class="display1">
+                    <button mat-flat (click)="openAdminDialog()">
+                        Add/Remove Admins
+                    </button>
+                </div>
+            </span>
+            <div class="icon1" (click)="openOverlay()">
+                <button mat-fab class="fab-button">
+                    <mat-icon>{{ closeIcon}}</mat-icon>
+                </button>
+            </div>
+        </div>
     </div>
-    
+
 </div>
+<div class="overlay" *ngIf="!overlay"></div>

@@ -2,7 +2,7 @@
 
 .container{
   height: 1138px;
-  background: linear-gradient(52.03deg, #f7fb02ef 0%, #f15c06a9 100%);
+  background: linear-gradient(52.03deg, #7A7FC8 0%, #BD385B 100%);
 
   .loginForm{
     position: absolute;
@@ -24,12 +24,15 @@
       position: relative;
       //margin-top: 5%;
       //margin-left: 44%;
-      @include font;
-      color: #000000;
-      font-size: 24px;
-      font-weight: 500;
-      letter-spacing: 0;
-      line-height: 29px;
+        height: 29px;
+        width: 64px;
+        color: #000000;
+        font-family:  Roboto;
+        font-size: 24px;
+        font-weight: 500;
+        letter-spacing: 0;
+        line-height: 29px;
+
     }
 
     .password,
@@ -41,12 +44,16 @@
 
     .loginButton {
       @include font;
-      background-color: #FF410B;
+      font-weight: 500;
+      letter-spacing: 1.25px;
+      line-height: 16px;
+      text-align: center;
+      background-color: #D92756;
       position: relative;
       height: 48px;
       width: 139px;
       border-radius: 25px;
-      //margin-left: 35%;
+      margin-left: 25%;
     }
 
     .forgotPassword {
@@ -54,12 +61,12 @@
       width: 97px;
       opacity: 0.8;
       color: #000000;
-      @include font;
-    
-      text-align: center;
+      font-family: Roboto;
+      font-size: 12px;
+      letter-spacing: 0;
       line-height: 14px;
-      position: relative;
-      //margin-left: 42%;
+    
+      margin-left: 33%;
       margin-top: 25px;
     }
     
