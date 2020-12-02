@@ -19,6 +19,7 @@ import { FormsModule } from '@angular/forms';
 import { AdminComponent } from './admin/admin.component';
 import { SuperAdminComponent } from './super-admin/super-admin.component';
 import { OptionsComponent } from './options/options.component';
+import { NgxMatFileInputModule } from '@angular-material-components/file-input';
 
 
 
@@ -43,8 +44,8 @@ import { OptionsComponent } from './options/options.component';
     BrowserAnimationsModule,
     MaterialModule,
     ReactiveFormsModule,
-    FormsModule
-
+    FormsModule,
+    NgxMatFileInputModule
   ],
   providers: [LoginAuthGuard, LoginService, HomeScreenService],
   bootstrap: [AppComponent]

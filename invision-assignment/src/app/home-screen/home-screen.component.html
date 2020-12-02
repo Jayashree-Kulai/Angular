@@ -77,7 +77,7 @@
                             <mat-form-field appearance="outline">
                                 <mat-label>Select Start Date</mat-label>
                                 <input formControlName="startDate" matInput [matDatepicker]="picker1">
-                                <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+                                <mat-datepicker-toggle class="dateIcon" matSuffix [for]="picker1"></mat-datepicker-toggle> 
                                 <mat-datepicker #picker1></mat-datepicker>
                             </mat-form-field>
                         </mat-grid-tile>
@@ -86,7 +86,7 @@
                             <mat-form-field appearance="outline">
                                 <mat-label>Select End Date</mat-label>
                                 <input formControlName="endDate" matInput [matDatepicker]="picker">
-                                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                                <mat-datepicker-toggle class="dateIcon" matSuffix [for]="picker"></mat-datepicker-toggle>
                                 <mat-datepicker #picker></mat-datepicker>
                             </mat-form-field>
                         </mat-grid-tile>
@@ -104,16 +104,19 @@
                         <mat-grid-tile>
                             <mat-form-field appearance="outline">
                                 <mat-label>Select Content PPT File</mat-label>
-                                <input formControlName="pptFile" matInput>
-                                <mat-icon matSuffix color='accent'>cloud_upload</mat-icon>
+                                <ngx-mat-file-input formControlName="pptFile" [accept]="'.ppt,.pptx'">
+                                    <mat-icon ngxMatFileInputIcon class="fileIcon" >backup</mat-icon>
+                                </ngx-mat-file-input>
                             </mat-form-field>
+
                         </mat-grid-tile>
 
                         <mat-grid-tile>
                             <mat-form-field appearance="outline">
                                 <mat-label>Select Participant xl Sheet</mat-label>
-                                <input formControlName="xlSheet" matInput >
-                                <mat-icon matSuffix color='accent'>cloud_upload</mat-icon>
+                                <ngx-mat-file-input formControlName="xlSheet" [accept]="'.xls,.xlsx,.docx,.doc'">
+                                    <mat-icon ngxMatFileInputIcon class="fileIcon">backup</mat-icon>
+                               </ngx-mat-file-input>
                             </mat-form-field>
                         </mat-grid-tile>
                     </mat-grid-list>
@@ -129,28 +132,30 @@
 
         <div class="actions">
             <button mat-raised-button>
-                <mat-icon matSuffix>save</mat-icon>
-                <label>SAVE</label>
+                <mat-icon>save</mat-icon>
+                SAVE
             </button>
 
             <button mat-raised-button>
-                <mat-icon matSuffix>preview</mat-icon>
-                <label>PREVIEW</label>
+                <mat-icon>preview</mat-icon>
+                PREVIEW
             </button>
 
             <button mat-raised-button>
-                <mat-icon matSuffix>publish</mat-icon>
-                <label>PUBLISH</label>
+                <mat-icon>publish</mat-icon>
+                PUBLISH
             </button>
 
             <button mat-raised-button>
-                <mat-icon matSuffix>add_alert</mat-icon>
-                <label>REMIND</label>
+                <mat-icon>add_alert</mat-icon>
+                REMIND
             </button>
 
             <button mat-raised-button>
-                <mat-icon matSuffix>description</mat-icon>
-                <label>GENERATE REPORT</label>
+                 
+                     <mat-icon>description</mat-icon>
+                GENERATE REPORT
+            
             </button>
         </div>
 
@@ -159,7 +164,7 @@
                 <div mat-dialog-close routerLink="/changepassword" class="display">
                     Change Password
                 </div>
-                
+
                 <div class="display1">
                     <button mat-flat (click)="openSuperAdminDialog()">
                         Add/Remove Super Admins</button>

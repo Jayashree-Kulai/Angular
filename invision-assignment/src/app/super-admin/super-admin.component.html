@@ -1,81 +1,59 @@
-<div class = "clear">
-    <mat-icon (click) = "closeDialog()" routerLink="/homescreen">clear</mat-icon>
+<div class="clear">
+    <mat-icon (click)="closeDialog()" routerLink="/homescreen">clear</mat-icon>
 </div>
 
-<div class="admin">
+<div class="superAdmin">
     <mat-toolbar>
         <span>Add/ Super Remove Admins</span>
     </mat-toolbar>
     <div class="parent">
-        <mat-form-field appearance="outline">
+        <mat-form-field appearance="outline" style="width:20%">
             <mat-label>Enter Name</mat-label>
-            <input matInput>
+            <input matInput type="text" [(ngModel)]="super.name">
         </mat-form-field>
 
-        <mat-form-field appearance="outline">
+        <mat-form-field appearance="outline" style="width:20%">
             <mat-label>Enter Employee Code</mat-label>
-            <input matInput>
+            <input matInput type="text" [(ngModel)]="super.id">
         </mat-form-field>
 
-        <mat-form-field appearance="outline" style="width:300px">
+        <mat-form-field appearance="outline" style="width:40%">
             <mat-label>Enter Mail ID</mat-label>
-            <input matInput>
+            <input matInput type="text" [(ngModel)]="super.mail">
         </mat-form-field>
 
-        <button mat-mini-fab>
+        <button mat-mini-fab (click)="save()">
             <mat-icon>add</mat-icon>
         </button>
     </div>
 
     <div class="line"></div>
 
-    <div class="child">
-        <mat-form-field appearance="outline">
-            <mat-label>Name</mat-label>
+    <div class="child" *ngFor="let superadmin of superAdmin">
+        <mat-form-field appearance="outline" style="width:20%">
             <input matInput>
+            <span matPrefix>{{ superadmin.name }}</span>
         </mat-form-field>
 
-        <mat-form-field appearance="outline">
-            <mat-label>Employee Code</mat-label>
+        <mat-form-field appearance="outline" style="width:20%">
             <input matInput>
+            <span matPrefix>{{ superadmin.id }}</span>
         </mat-form-field>
 
-        <mat-form-field appearance="outline" style="width:300px">
-            <mat-label>Mail ID</mat-label>
+        <mat-form-field appearance="outline" style="width:40%">
             <input matInput>
+            <span matPrefix>{{ superadmin.mail }}</span>
         </mat-form-field>
         <button mat-mini-fab>
             <mat-icon>edit</mat-icon>
         </button>
-        <button mat-mini-fab>
+        <button mat-mini-fab (click)="delete(superadmin)">
             <mat-icon>delete</mat-icon>
         </button>
     </div>
-    <div class="child">
-        <mat-form-field appearance="outline">
-            <mat-label>Name</mat-label>
-            <input matInput>
-        </mat-form-field>
+   
 
-        <mat-form-field appearance="outline">
-            <mat-label>Employee Code</mat-label>
-            <input matInput>
-        </mat-form-field>
-
-        <mat-form-field appearance="outline" style="width:300px">
-            <mat-label>Mail ID</mat-label>
-            <input matInput>
-        </mat-form-field>
-
-        <button mat-mini-fab>
-            <mat-icon>edit</mat-icon>
-        </button>
-        <button mat-mini-fab>
-            <mat-icon>delete</mat-icon>
-        </button>
-    </div>
-
-    <div class = "buttons">
+    <div class="buttons">
         <button mat-mini-fab class="new-query-btn">Update</button>
         <button mat-mini-fab class="new-query-btn" mat-dialog-close>cancel</button>
     </div>

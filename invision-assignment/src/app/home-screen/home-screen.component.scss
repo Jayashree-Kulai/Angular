@@ -124,7 +124,11 @@
             background-color: #ffffff;
             
             mat-form-field{
-              width:100%
+              width:100%;
+              .fileIcon,
+              .dateIcon{
+                color:#d92756 ;
+            }
             }
           }
         }
@@ -136,18 +140,24 @@
           background-color: #f9faf2;
           margin-left:15px;
           margin-top: -560px;
+          border-left:solid #e20e78;
 
           button{ 
-            margin-left: 15px;
+            margin-left: 29px;
             background-color: #FDF4F6;
             width: 187px;
             height: 50px;
             margin-top: 15px;
+            color: #D92756;
+            text-align: left;
             
             mat-icon{
               color: #D92756;
+              float: left;
+              margin-right: 5px;
+              margin-top: 5px;
               //margin-left:10px;
-              vertical-align: middle;
+              //vertical-align: middle;
             }
             label{ 
               height: 16px;
@@ -221,7 +231,7 @@
       } 
   }
 
-  .actions,
+  
   .form,
   .form-bg,
   .rectangle{
